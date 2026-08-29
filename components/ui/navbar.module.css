@@ -1,0 +1,107 @@
+.navWrapper {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+}
+
+.pillNav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.avatar {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--fg);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-right: 2px;
+    flex-shrink: 0;
+}
+
+.avatarPulse {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 6px var(--accent);
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.tab {
+    position: relative;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--fg-muted);
+    background: transparent;
+    border: none;
+    padding: 9px 15px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.tab:hover { color: var(--fg); }
+.tab[data-active="true"] { color: #FFFFFF; }
+
+.indicator {
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    border-radius: var(--radius-pill);
+    z-index: 0;
+}
+
+.tabLabel {
+    position: relative;
+    z-index: 1;
+}
+
+.resumeBtn {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    background: var(--fg);
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    margin-left: 4px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.resumeBtn:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+    .tabLabel { display: none; }
+    .tab { padding: 10px; }
+    .tab[data-active="true"] .tabLabel { display: inline; }
+    .pillNav { gap: 2px; padding: 6px; }
+}

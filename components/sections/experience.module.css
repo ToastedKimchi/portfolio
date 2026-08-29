@@ -1,0 +1,207 @@
+.experience {
+    padding: 100px clamp(20px, 4vw, 56px);
+    border-top: 1px solid var(--line);
+}
+
+.headRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    margin: 16px 0 0;
+}
+
+.statusTag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    padding: 7px 14px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--line-strong);
+    color: var(--fg-muted);
+}
+
+.statusTag[data-active="true"] {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ---------- Pending state ---------- */
+
+.pendingPanel {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background: var(--bg-soft);
+    border: 1px dashed var(--line-strong);
+    border-radius: var(--radius-card);
+    padding: 44px 40px;
+}
+
+.radar {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    overflow: hidden;
+}
+
+.sweep {
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(from 0deg, rgba(232, 53, 42, 0.35), transparent 35%);
+}
+
+.radarRing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radarCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.pendingText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 46ch;
+}
+
+.pendingHead {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pulseDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.pendingLabel {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--fg);
+}
+
+.pendingDesc {
+    color: var(--fg-muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.pendingCta {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    text-decoration: none;
+    width: fit-content;
+    margin-top: 4px;
+}
+
+.pendingCta:hover { text-decoration: underline; }
+
+/* ---------- Populated log state ---------- */
+
+.log {
+    display: flex;
+    flex-direction: column;
+}
+
+.logRow {
+    display: flex;
+    gap: 24px;
+}
+
+.logRail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16px;
+    flex-shrink: 0;
+}
+
+.logBlip {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.logLine {
+    width: 1px;
+    flex: 1;
+    background: var(--line-strong);
+    margin-top: 4px;
+}
+
+.logBody {
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logTop {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+}
+
+.logRole {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.logPeriod {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+}
+
+.logOrg {
+    color: var(--fg-muted);
+    font-size: 0.85rem;
+}
+
+.logNote {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 60ch;
+    margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+    .pendingPanel { flex-direction: column; text-align: center; gap: 24px; }
+}

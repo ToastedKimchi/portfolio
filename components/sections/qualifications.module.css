@@ -1,0 +1,61 @@
+.wrap {
+    padding: 100px clamp(20px, 4vw, 56px);
+    border-top: 1px solid var(--line);
+}
+
+.title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    margin: 16px 0 48px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    display: flex;
+    background: var(--bg-soft);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.cardBar { width: 5px; background: var(--accent); flex-shrink: 0; }
+
+.cardBody { padding: 26px 24px; display: flex; flex-direction: column; gap: 8px; }
+
+.cardTop { display: flex; justify-content: space-between; align-items: center; }
+
+.num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--fg-muted);
+}
+
+.period {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+}
+
+.role {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 4px 0 0;
+}
+
+.org { color: var(--fg-muted); font-size: 0.85rem; }
+
+.note {
+    color: var(--fg-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-top: 6px;
+}

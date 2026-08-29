@@ -1,0 +1,61 @@
+.mainDiv {
+    background-color : white;
+    height : 100dvh;
+    width : 100dvw;
+    padding : clamp(1vh, 2vh, 2.5vh);
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content: space-between;
+    position : relative;
+    overflow-x : hidden;
+    overflow-y : hidden;
+}
+
+.phraseDiv {
+    width : 100%;
+    justify-content : center;
+    display : flex;
+    z-index : 10;
+    height : 18%;
+}
+
+.midSection {
+    width : 100%;
+    height : 38%;
+    display : flex;
+    flex-direction : row;
+    justify-content : space-evenly;
+    align-items : center;
+}
+
+.interactiveSection {
+    width : 100%;
+    height : 25%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.separatorDiv {
+    height : 0.1%;
+    background-color : black;
+}
+
+.midWindow {
+    height : 100%;
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    border-radius : 6;
+}
+
+.windowIcon {
+    height : 70%;
+    width : 70%;
+}
+
+.windowText {
+    font-family : var(--font-electro);
+    font-size : 22;
+}

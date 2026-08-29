@@ -1,0 +1,49 @@
+.systems {
+    padding: 100px clamp(20px, 4vw, 56px);
+    border-top: 1px solid var(--line);
+}
+
+.title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    line-height: 1.1;
+    margin: 16px 0 20px;
+}
+
+.desc {
+    max-width: 60ch;
+    color: var(--fg-muted);
+    line-height: 1.7;
+    margin-bottom: 48px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+}
+
+.specCard {
+    background: var(--bg-panel);
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.specLabel {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--accent-cyan);
+}
+
+.specValue {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--fg);
+    line-height: 1.4;
+}

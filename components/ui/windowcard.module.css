@@ -1,0 +1,17 @@
+.midWindow {
+    height : 100%;
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    border-radius : 6;
+}
+
+.windowIcon {
+    height : 70%;
+    width : 70%;
+}
+
+.windowText {
+    font-family : var(--font-electro);
+    font-size : 22;
+}

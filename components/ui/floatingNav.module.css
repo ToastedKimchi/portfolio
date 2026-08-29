@@ -1,0 +1,69 @@
+.pillNav {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px;
+    background: rgba(20, 20, 23, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--bg-panel-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--fg);
+    margin-right: 4px;
+}
+
+.tab {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--fg-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 9px 16px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab:hover { color: var(--fg); }
+
+.tabActive {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.resumeBtn {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #0A0A0C;
+    background: var(--accent);
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.resumeBtn:hover { transform: translateY(-1px); }
+
+@media (max-width: 640px) {
+    .pillNav { gap: 2px; padding: 6px; }
+    .tab { padding: 8px 10px; font-size: 0.72rem; }
+    .resumeBtn { padding: 8px 14px; font-size: 0.75rem; }
+}
