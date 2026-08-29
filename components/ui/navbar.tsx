@@ -4,7 +4,7 @@ import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import styles from './navbar.module.css';
 
 const TABS = [
-    { id: 'work', label: 'Work' },
+    { id: 'work', label: 'About' },
     { id: 'about', label: 'Education' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
